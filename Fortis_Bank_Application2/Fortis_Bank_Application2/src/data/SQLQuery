@@ -1,0 +1,13 @@
+Create user bankdb identified by 123;
+grant all privileges to bankdb;
+connect bankdb/123
+
+Create table customers(
+customernumber number(38) not null,
+firstname varchar2(25),
+lastname varchar2(25),
+pin number(38),
+email varchar2(100), 
+address varchar2(100),
+CONSTRAINT PK_Customer PRIMARY KEY (customernumber)
+);
